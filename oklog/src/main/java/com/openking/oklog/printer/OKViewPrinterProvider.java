@@ -75,6 +75,7 @@ public class OKViewPrinterProvider {
                 showLogView();
             }
         });
+        textView.setTextColor(Color.WHITE);
         textView.setText(R.string.str_log_tag);
         return floatingView = textView;
     }
@@ -106,6 +107,7 @@ public class OKViewPrinterProvider {
         TextView closeView = new TextView(rootView.getContext());
         closeView.setOnClickListener(view -> closeLogView());
         closeView.setText("Close");
+        closeView.setTextColor(Color.WHITE);
         logView.addView(closeView, params);
         return this.logView = logView;
     }

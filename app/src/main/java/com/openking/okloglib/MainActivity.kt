@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+        OKLogManager.getInstance().removePrinter(viewPrinter)
         viewPrinter.provider.closeFloatingView()
     }
 }
